@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmendes- <mmendes-@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/22 18:16:43 by mmendes-          #+#    #+#             */
+/*   Updated: 2023/11/22 18:16:54 by mmendes-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 	#include "./mlx/mlx.h"
-	#include <fcntl.h> // For open
-	#include <unistd.h> // For close, read
-	#include <stdlib.h> // For malloc, free
-	#include <string.h> // For strerror (if needed)
-	#include <stdio.h> // For perror
+	#include <fcntl.h>
+	#include <unistd.h>
+	#include <stdlib.h>
+	#include <string.h>
+	#include <stdio.h>
 	#include "get_next_line/get_next_line.h"
 
 	typedef struct s_data {
