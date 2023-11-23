@@ -6,7 +6,7 @@
 /*   By: mmendes- <mmendes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 18:17:38 by mmendes-          #+#    #+#             */
-/*   Updated: 2023/11/22 18:17:40 by mmendes-         ###   ########.fr       */
+/*   Updated: 2023/11/23 00:25:02 by mmendes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_strjoin(char *str1, char *str2)
 	if (!newstr)
 		return (NULL);
 	while (str1 && str1[i])
-	{	
+	{
 		newstr[i] = str1[i];
 		i++;
 	}

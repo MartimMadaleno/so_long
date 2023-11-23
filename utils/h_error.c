@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_map_closed.c                                    :+:      :+:    :+:   */
+/*   h_error.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmendes- <mmendes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 18:17:16 by mmendes-          #+#    #+#             */
-/*   Updated: 2023/11/23 00:47:33 by mmendes-         ###   ########.fr       */
+/*   Created: 2023/11/23 17:32:12 by mmendes-          #+#    #+#             */
+/*   Updated: 2023/11/23 18:03:20 by mmendes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-int	is_map_closed(t_data *data)
+void	h_error(t_data *data, char *str)
 {
-	int	i;
+	free_data(data);
+	perror(str);
+	exit(EXIT_FAILURE);
+}
 
-	i = 0;
-	while (i < data->map_width)
-	{
-		if (data->map[0][i] != '1' || data->map[data->map_height - 1][i] != '1')
-			return (0);
-		i++;
-	}
-	i = 0;
-	while (i < data->map_height)
-	{
-		if (data->map[i][0] != '1' || data->map[i][data->map_width - 1] != '1')
-			return (0);
-		i++;
-	}
-	return (1);
+void	e_error(char *str)
+{
+	perror(str);
+	exit(EXIT_FAILURE);
 }

@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_map_closed.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmendes- <mmendes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 18:17:16 by mmendes-          #+#    #+#             */
-/*   Updated: 2023/11/23 00:47:33 by mmendes-         ###   ########.fr       */
+/*   Created: 2022/11/09 19:34:51 by mmendes-          #+#    #+#             */
+/*   Updated: 2023/11/23 18:29:52 by mmendes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-int	is_map_closed(t_data *data)
+void	ft_putnbr(int n)
 {
-	int	i;
-
-	i = 0;
-	while (i < data->map_width)
+	if (n <= INT_MAX && n >= INT_MIN)
 	{
-		if (data->map[0][i] != '1' || data->map[data->map_height - 1][i] != '1')
-			return (0);
-		i++;
+		if (n > 9)
+		{
+			ft_putnbr(n / 10);
+			ft_putnbr(n % 10);
+		}
+		else
+		{
+			ft_putchar(n + '0');
+		}
 	}
-	i = 0;
-	while (i < data->map_height)
-	{
-		if (data->map[i][0] != '1' || data->map[i][data->map_width - 1] != '1')
-			return (0);
-		i++;
-	}
-	return (1);
 }
